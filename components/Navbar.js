@@ -1,6 +1,6 @@
 import Link from "next/link";
-import rondtarinLogo from "../public/static/images/rondtarinLogo.svg";
-import Image from "next/image";
+// import rondtarinLogo from "static/images/rondtarinLogo.svg";
+// import Image from "next/image";
 import Button from "./ui/button/Button";
 import Modal from "./ui/modal/Modal";
 import React from "react";
@@ -21,8 +21,8 @@ const Navbar = () => {
       <div className="container flex justify-between items-center w-full">
         <div className="flex gap-x-10 items-center">
           <div>
-            <Image
-              src={rondtarinLogo}
+            <img
+              src={"static/images/rondtarinLogo.svg"}
               height={36}
               width={96}
               alt="لوگوی رندترین"
@@ -40,7 +40,12 @@ const Navbar = () => {
         </div>
         <div className="flex gap-x-1">
           {showModal && <Modal setShowModal={setShowModal} />}
-          <Button title="ورود" link className="text-purple-purple-05" />
+          <Button
+            title="ورود"
+            link
+            className="text-purple-purple-05"
+            onClick={() => console.log("00000000000")}
+          />
           <Button
             title="ثبت نام"
             className="text-purple-purple-05 border-purple-purple-05"
